@@ -122,6 +122,9 @@ vpc_security_group_ids = [aws_security_group.demosg.id]
     private_key = file(var.private_key)
     # Type of connection
     type = "ssh"
+    # Host
+    host = self.public_ip
+
   }
   
   # Installing splunk & creating distributed indexer clustering on newly created instance
