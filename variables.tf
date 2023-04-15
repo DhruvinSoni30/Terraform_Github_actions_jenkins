@@ -31,6 +31,6 @@ variable "private_key" {
 
 # Definign Key Name for connection
 variable "key_name" {
-  default = "tests"
+  default     = "tests"
   description = "Desired name of AWS key pair"
 }
