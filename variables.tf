@@ -28,3 +28,9 @@ variable "public_key" {
 variable "private_key" {
   default = "tests.pem"
 }
+
+# Definign Key Name for connection
+variable "key_name" {
+  default = "tests"
+  description = "Desired name of AWS key pair"
+}
