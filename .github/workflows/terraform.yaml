@@ -26,6 +26,10 @@ jobs:
       - name: Terraform formate
         id: formate
         run: terraform fmt
+    
+      - name: Terraform init
+        id: init
+        run: terraform init
       
       - name: Terraform validate
         id: validate
