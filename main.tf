@@ -23,9 +23,9 @@ data "aws_availability_zones" "az" {}
 
 # AWS Subnet
 resource "aws_subnet" "demo_subnet" {
-  vpc_id                  = aws_vpc.demo_vpc.id
-  cidr_block              = var.cidr_block_subnet
-  availability_zone       = data.aws_availability_zones.az.names[0]
+  vpc_id                          = aws_vpc.demo_vpc.id
+  cidr_block  = var.cidr_block_subnet
+  availability_zone    = data.aws_availability_zones.az.names[0]
   map_public_ip_on_launch = true
 
   tags = {
