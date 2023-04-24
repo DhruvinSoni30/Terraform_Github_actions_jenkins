@@ -38,7 +38,10 @@ jobs:
     
       - name: Terraform formate
         id: formate
-        run: terraform fmt
+        run: |
+          terraform fmt -check -recursive .
+          terraform fmt -diff -write=true -recursive .
+          terraform fmt
         
       - name: Terraform init
         id: init
