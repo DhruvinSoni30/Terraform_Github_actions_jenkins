@@ -44,7 +44,7 @@ jobs:
         
       - name: Terraform init
         id: init
-        run: terraform init
+        run: terraform init -reconfigure -backend=false
       
       - name: Terraform validate
         id: validate
