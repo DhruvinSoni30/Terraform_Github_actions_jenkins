@@ -42,7 +42,8 @@ for f in file:
 fp.close()
 
 if len(errors) > 0:
-    print("Found some errors in terraform.tfvars, please fix it")
+    for error in errors:
+        print(error)
     exit(1)
 else:
     print("All the check passed!")
